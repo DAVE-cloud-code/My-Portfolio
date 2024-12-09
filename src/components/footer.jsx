@@ -1,12 +1,17 @@
 import React from 'react';
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Link, IconButton } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer = () => {
   return (
     <Box
       component="footer"
       sx={{
-        background: "#24243e" ,
+        background: "#24243e",
         color: 'white',
         padding: '20px',
         textAlign: 'center',
@@ -16,31 +21,53 @@ const Footer = () => {
       <Typography variant="body2" color="inherit">
         &copy; {new Date().getFullYear()} My Portfolio. All rights reserved.
       </Typography>
-      <Box sx={{ marginTop: '10px' }}>
+      <Box sx={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
         {/* Social media links */}
-        <Link
-          href="https:www.linkedin.com/"
+        <IconButton
+          component="a"
+          href="https://www.linkedin.com/in/david-uche-5782a5325"
           target="_blank"
-          color="inherit"
-          sx={{ marginRight: '10px' }}
+          aria-label="LinkedIn"
+          sx={{ color: 'white' }}
         >
-          LinkedIn
-        </Link>
-        <Link
-        href="https://github.com/DAVE-cloud-code"
+          <LinkedInIcon />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://github.com/DAVE-cloud-code"
           target="_blank"
-          color="inherit"
-          sx={{ marginRight: '10px' }}
+          aria-label="GitHub"
+          sx={{ color: 'white' }}
         >
-          GitHub
-        </Link>
-        <Link
-          href="https://twitter.com"
+          <GitHubIcon />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://x.com/Ultimatedee123?t=Uk3d6WT3FhjhM6WQEQEDnQ&s=09"
           target="_blank"
-          color="inherit"
+          aria-label="Twitter"
+          sx={{ color: 'white' }}
         >
-          Twitter
-        </Link>
+          <TwitterIcon />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://www.facebook.com/profile.php?id=61550021660068"
+          target="_blank"
+          aria-label="Facebook"
+          sx={{ color: 'white' }}
+        >
+          <FacebookIcon />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://wa.me/+2349029956760"
+          target="_blank"
+          aria-label="WhatsApp"
+          sx={{ color: 'white' }}
+        >
+          <WhatsAppIcon />
+        </IconButton>
       </Box>
     </Box>
   );
