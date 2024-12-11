@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, CircularProgress, Typography, Grid } from "@mui/material";
-import { keyframes } from "@emotion/react"; // For animations
+import { keyframes } from "@emotion/react";
 
 // Animation for fade-in
 const fadeIn = keyframes`
@@ -14,7 +14,7 @@ const skills = [
   { name: "Tailwind", level: 7 },
   { name: "JS", level: 9 },
   { name: "React", level: 9 },
-  { name: "MUI", level: 7 },
+  { name: "MUI", level: 9 },
   { name: "Node.js", level: 7 },
   { name: "Express", level: 8 },
   { name: "Redux", level: 8 },
@@ -50,7 +50,7 @@ const Skills = () => {
       {/* Skills Grid */}
       <Grid container spacing={4} justifyContent="center">
         {skills.map((skill, index) => (
-          <Grid item xs={6} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <Box
               sx={{
                 position: "relative",
@@ -58,10 +58,10 @@ const Skills = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
-                backgroundColor: "rgba(255, 255, 255, 0.1)", 
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
                 borderRadius: "8px",
-                p: 2,
-                animation: `${fadeIn} ${1 + index * 0.2}s ease-out`, 
+                p: 3,
+                animation: `${fadeIn} ${1 + index * 0.2}s ease-out`,
                 transition: "transform 0.3s ease",
                 "&:hover": { transform: "scale(1.05)" },
               }}
@@ -74,8 +74,6 @@ const Skills = () => {
                 thickness={5}
                 sx={{
                   color: "#f50057", // Pink color
-                  background: "linear-gradient(145deg, #0f0c29, #302b63, #24243e)",
-                  borderRadius: "50%",
                   "& circle": { strokeLinecap: "round" },
                 }}
               />

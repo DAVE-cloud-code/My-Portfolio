@@ -116,6 +116,9 @@ const HeroSection = () => {
           <Button
             variant="contained"
             startIcon={<DownloadIcon />}
+            component="a"
+            href="/fakeCV.pdf" // Path to the resume file
+            download="Ugochukwu_David_Resume.pdf" // Suggested file name
             sx={{
               backgroundColor: "#f50057",
               padding: "10px 20px",
